@@ -1,7 +1,7 @@
 {
-  "name": "mox-design",
+  "name": "@mox",
   "displayName": "Mox",
-  "version": "1.0.0",
+  "version": "0.0.0rc1",
   "description": "Mox: React UI Component Library",
   "repository": "git@gitlab.com:PatrickChoDev/mox.git",
   "author": "Thanapat Chotipun <devpatrick.cho@gmail.com>",
