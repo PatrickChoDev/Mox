@@ -1,0 +1,11 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "endOfLine": "lf",
+  "plugins": ["react"],
+  "parser": "typescript",
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80
+}
