@@ -1,0 +1,27 @@
+image: node:latest
+
+stages:         
+  - prepare 
+  - test
+  - build
+  - deploy
+
+cache:
+    paths:
+        - "node_modules"
+
+prepare_env:
+    stage: prepare
+    script: yarn install
+
+jest:
+    stage: test
+    script: yarn test
+
+main_build:
+    stage: build
+    script: yarn build
+
+docs_build:
+    stage: build
+    script: yatn build:docs
