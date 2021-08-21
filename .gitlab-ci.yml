@@ -1,10 +1,10 @@
 image: node:latest
 
-stages:         
-  - prepare 
-  - test
-  - build
-  - deploy
+stages:
+    - prepare
+    - test
+    - build
+    - deploy
 
 cache:
     paths:
@@ -24,4 +24,4 @@ main_build:
 
 docs_build:
     stage: build
-    script: yatn build:docs
+    script: yarn build:docs
