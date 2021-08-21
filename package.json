@@ -49,7 +49,6 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "build:esm": "tsc",
     "build:docs": "build-storybook -o docs",
     "build:sb": "build-storybook -o storybook",
     "build:cjs": "tsc --module commonjs --outDir lib/cjs",
@@ -61,6 +60,5 @@
     "react": "^17.0.2"
   },
   "dependencies": {
-    "mox-design": "../Mox"
   }
 }
