@@ -1,5 +1,5 @@
 import React from "react"
-import { Button } from "mox-design"
+import { Button } from "../components/Button"
 
 export default {
   title: "TestComponent",
