@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import {Button} from '../../components/Button'
+
+<Meta title="TestComponent" component={Button} />
+
+# Test Component
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+export const Template = (args) => <Button {...args} />
+
+<Canvas>
+  <Story name="Unchecked" args={{ 
+      label: 'Unchecked',
+      children: 'Hi'
+    }}>
+    {Template.bind({})}
+   </Story>
+  <Story name="Checked" args={{ 
+      label: 'Unchecked', 
+      checked: true 
+    }}>
+    {Template.bind({})}
+   </Story>
+  <Story name="Secondary" args={{
+    label: 'Secondary', 
+    checked: true, 
+    appearance: 'secondary'
+  }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>

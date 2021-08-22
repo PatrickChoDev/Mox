@@ -7,6 +7,7 @@ import postcss from "rollup-plugin-postcss"
 import packageJson from "./package.json"
 
 export default {
+
   input: "./components/index.ts",
   output: [
     {
