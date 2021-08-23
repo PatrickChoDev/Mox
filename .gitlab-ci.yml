@@ -13,12 +13,15 @@ cache:
 prepare_env:
     stage: prepare
     script: yarn install
+    only:
+    - main
+    - /^issue-.*$/
+    - merge_requests
 
 jest:
     stage: test
     script: yarn test
     only:
-    - dev
     - /^issue-.*$/
     - merge_requests
 
