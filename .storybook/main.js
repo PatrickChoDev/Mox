@@ -14,7 +14,7 @@ module.exports = {
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.s(c|a)ss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
+      use: ['style-loader', 'css-modules-typescript-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
     return config;

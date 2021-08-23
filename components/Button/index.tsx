@@ -1,5 +1,4 @@
 import React from "react"
-import './index.sass'
 
 export class Button extends React.Component {
   constructor(props: {} | Readonly<{}>) {
