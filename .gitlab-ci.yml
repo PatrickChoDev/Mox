@@ -14,6 +14,7 @@ prepare_env:
     stage: prepare
     script: yarn install
     only:
+    - main
     - /^issue-.*$/
     - merge_requests
 

@@ -1,0 +1,20 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import {Button} from '../../components/Button'
+import '../../components/Styles/dark.sass'
+
+<Meta title="Button" component={Button} />
+
+# Button
+
+Button is fundamental input from the user interface,
+so we'd like to show you how does it works!!
+
+export const Template = (args) => <Button {...args} />
+
+<Canvas>
+  <Story name="Primary" args={{ 
+      children: "Hi"
+    }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>
