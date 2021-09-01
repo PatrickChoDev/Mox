@@ -1,42 +1,46 @@
+# You can override the included template(s) by including variable overrides
+# SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Secret Detection customization: https://docs.gitlab.com/ee/user/application_security/secret_detection/#customizing-settings
+# Dependency Scanning customization: https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#customizing-the-dependency-scanning-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 image: node:latest
-
 stages:
-    - prepare
-    - test
-    - build
-    - deploy
-
+- prepare
+- test
+- build
+- deploy
 cache:
-    paths:
-        - "node_modules"
-
+  paths:
+  - node_modules
 prepare_env:
-    stage: prepare
-    script: yarn install
-    only:
-    - main
-    - /^issue-.*$/
-    - merge_requests
-
+  stage: prepare
+  script: yarn install
+  only:
+  - main
+  - "/^issue-.*$/"
+  - merge_requests
 jest:
-    stage: test
-    script: yarn test
-    only:
-    - /^issue-.*$/
-    - merge_requests
-
+  stage: test
+  script: yarn test
+  only:
+  - "/^issue-.*$/"
+  - merge_requests
 main_build:
-    stage: build
-    script: yarn build
-    only:
-    - main
-    - /^issue-.*$/
-    - merge_requests
-
+  stage: build
+  script: yarn build
+  only:
+  - main
+  - "/^issue-.*$/"
+  - merge_requests
 docs_build:
-    stage: build
-    script: yarn build:docs
-    only:
-    - main
-    - /^issue-.*$/
-    - merge_requests
+  stage: build
+  script: yarn build:docs
+  only:
+  - main
+  - "/^issue-.*$/"
+  - merge_requests
+sast:
+  stage: test
+include:
+- template: Security/SAST.gitlab-ci.yml
