@@ -13,7 +13,10 @@ export const Template = (args) => <Button {...args} />
 
 <Canvas>
   <Story name="Primary" args={{ 
-      children: "Hi"
+      children: "Hi",
+      variant: 'primary',
+      theme: 'dark',
+      colors: ['333','ddd']
     }}>
     {Template.bind({})}
    </Story>

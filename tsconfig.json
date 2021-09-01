@@ -17,6 +17,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["components"],
+  "include": ["components", "stories"],
   "exclude": ["node_modules", "lib"]
 }
